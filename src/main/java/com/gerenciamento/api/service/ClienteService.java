@@ -35,6 +35,12 @@ public class ClienteService {
 		return clienteRepository.findAll();
 	}
 	
+	public Optional<Long> findLastId() {
+		return clienteRepository.getMaxId();
+	}
 	
-
+	public void saveAll(List<Cliente> clientes) {
+		clienteRepository.saveAll(clientes);
+	}
+	
 }
